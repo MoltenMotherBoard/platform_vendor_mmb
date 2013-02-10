@@ -9,3 +9,5 @@ PRODUCT_COPY_FILES += \
     vendor/mmb/etc/hosts:system/etc/hosts \
     vendor/mmb/app/Superuser.apk:system/app/Superuser.apk
 
+#We do call Camera app because it won't be built instead
+PRODUCT_PACKAGES += Camera
