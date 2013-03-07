@@ -1,13 +1,33 @@
-## MoltenMotherBoard extra vendor repo ;)
+## MoltenMotherBoard
+#
+#	This vendors are created by MMB-Team.
+#	They're needed to add some missing (important) features,
+#	already used by other Custom Roms (as CyanogenMod, AOKP, etc).
+#
+#		Including:
+#		- Superuser app
+#		- APNS configuration file
+#		- Modded Hosts file (no Ads)
+#		- Init.d Support Enabler (sysinit, run-parts, install-recovery.sh)
+#		- Camera (to make it building)
 
-## In order:
-# APNs
-# Hosts file
-# Superuser app
+## Superuser
 PRODUCT_COPY_FILES += \
-    vendor/mmb/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/mmb/etc/hosts:system/etc/hosts \
     vendor/mmb/app/Superuser.apk:system/app/Superuser.apk
 
-#We do call Camera app because it won't be built instead
+## APNs
+PRODUCT_COPY_FILES += \
+    vendor/mmb/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+## Hosts
+PRODUCT_COPY_FILES += \
+    vendor/mmb/etc/hosts:system/etc/hosts
+
+## Init.d support Enabler
+PRODUCT_COPY_FILES += \
+    vendor/mmb/bin/sysinit:system/bin/sysinit \
+    vendor/mmb/xbin/run-parts:system/xbin/run-parts \
+    vendor/mmb/etc/install-recovery.sh:system/etc/install-recovery.sh
+
+## Other Packages
 PRODUCT_PACKAGES += Camera
