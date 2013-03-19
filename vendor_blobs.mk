@@ -29,5 +29,9 @@ PRODUCT_COPY_FILES += \
     vendor/mmb/xbin/run-parts:system/xbin/run-parts \
     vendor/mmb/etc/install-recovery.sh:system/etc/install-recovery.sh
 
+## User init support
+PRODUCT_COPY_FILES += \
+    vendor/mmb/etc/init.d/90userinit:system/etc/init.d/90userinit
+
 ## Other Packages
 PRODUCT_PACKAGES += Camera
