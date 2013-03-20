@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 ## User init support
 PRODUCT_COPY_FILES += \
-    vendor/mmb/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/mmb/etc/90userinit:system/etc/init.d/90userinit
 
 ## Other Packages
 PRODUCT_PACKAGES += Camera
