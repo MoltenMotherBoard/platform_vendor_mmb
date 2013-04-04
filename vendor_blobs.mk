@@ -33,5 +33,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/mmb/etc/90userinit:system/etc/init.d/90userinit
 
+## Camera effects blobs
+PRODUCT_COPY_FILES += \
+    vendor/mmb/camera/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/mmb/camera/PFFprec_600.emd:system/media/PFFprec_600.emd
+
 ## Other Packages
 PRODUCT_PACKAGES += Camera
