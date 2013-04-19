@@ -35,6 +35,7 @@ DELETE_APKS="Provision.apk QuickSearchBox.apk Gallery2.apk"
 
 REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
+rm -rf $OUT/mmb-*.zip*
 rm -rf $REPACK
 mkdir -p $REPACK
 echo
