@@ -26,8 +26,7 @@ PRODUCT_COPY_FILES += \
 ## Init.d support Enabler
 PRODUCT_COPY_FILES += \
     vendor/mmb/bin/sysinit:system/bin/sysinit \
-    vendor/mmb/xbin/run-parts:system/xbin/run-parts \
-    vendor/mmb/etc/install-recovery.sh:system/etc/install-recovery.sh
+    vendor/mmb/ramdisk/init.local.rc:root/init.local.rc
 
 ## User init support
 PRODUCT_COPY_FILES += \
