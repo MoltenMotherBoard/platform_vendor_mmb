@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
 
 ## User init support
 PRODUCT_COPY_FILES += \
+    vendor/mmb/etc/00banner:system/etc/init.d/00banner \
     vendor/mmb/etc/90userinit:system/etc/init.d/90userinit
 
 ## Camera effects blobs

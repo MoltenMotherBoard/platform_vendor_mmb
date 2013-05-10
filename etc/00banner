@@ -1,0 +1,12 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t mmb-boot"
+$L "  __  __   __  __   ___     _____   ____  ______   __  __";
+$L " |  \/  | |  \/  | |  _\   |__ __| | ___| | __  | |  \/  |";
+$L " | |\/| | | |\/| | | |_|     | |   | |__  | | | | | |\/| |";
+$L " | |  | | | |  | | |  _|     | |   | ___| | |_| | | |  | |";
+$L " | |  | | | |  | | | |_|     | |   | |__  |  _  | | |  | |";
+$L " | |  | | | |  | | |___/     |_|   |____| |_| |_| | |  | |";
+$L "Welcome to Android `getprop ro.build.version.release` offered to you by MoltenMotherBoard team!;
