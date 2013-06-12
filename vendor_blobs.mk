@@ -4,16 +4,6 @@
 #	They're needed to add some missing (important) features,
 #	already used by other Custom Roms (as CyanogenMod, AOKP, etc).
 #
-#		Including:
-#		- Superuser app
-#		- APNS configuration file
-#		- Modded Hosts file (no Ads)
-#		- Init.d Support Enabler (sysinit, run-parts, install-recovery.sh)
-#		- Camera (to make it building)
-
-## Superuser
-PRODUCT_COPY_FILES += \
-    vendor/mmb/app/Superuser.apk:system/app/Superuser.apk
 
 ## APNs
 PRODUCT_COPY_FILES += \
