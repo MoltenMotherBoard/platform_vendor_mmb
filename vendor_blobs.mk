@@ -6,7 +6,11 @@
 
 ## APNs
 PRODUCT_COPY_FILES += \
-    vendor/mmb/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/mmb/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/mmb/etc/profile:system/etc/profile \
+    vendor/mmb/etc/resolv.conf:system/etc/resolv.conf \
+    vendor/mmb/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    vendor/mmb/etc/sysctl.conf:system/etc/sysctl.conf
 
 ## Hosts
 PRODUCT_COPY_FILES += \
@@ -26,6 +30,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/mmb/camera/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/mmb/camera/PFFprec_600.emd:system/media/PFFprec_600.emd
+
+## XBIN files
+PRODUCT_COPY_FILES += \
+    vendor/mmb/xbin/bash:system/xbin/bash \
+    vendor/mmb/xbin/dropbear-keygen:system/xbin/dropbear-keygen \
+    vendor/mmb/xbin/htop:system/xbin/htop \
+    vendor/mmb/xbin/irssi:system/xbin/irssi \
+    vendor/mmb/xbin/nano:system/xbin/nano \
+    vendor/mmb/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
+    vendor/mmb/xbin/powertop:system/xbin/powertop
 
 ## Other Packages
 PRODUCT_PACKAGES := \
