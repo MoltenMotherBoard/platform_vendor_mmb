@@ -14,5 +14,5 @@ PRODUCT_COPY_FILES += \
 
 ## User init support
 PRODUCT_COPY_FILES += \
-    vendor/mmb/proprietary/system/etc/00banner:system/etc/init.d/01mmb
+    vendor/mmb/proprietary/system/etc/init.d/00banner:system/etc/init.d/01mmb
 
