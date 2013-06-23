@@ -10,9 +10,9 @@
 
 ## Hosts
 PRODUCT_COPY_FILES += \
-    vendor/mmb/etc/hosts:system/etc/hosts
+    vendor/mmb/proprietary/system/etc/hosts:system/etc/hosts
 
 ## User init support
 PRODUCT_COPY_FILES += \
-    vendor/mmb/etc/00banner:system/etc/init.d/01mmb
+    vendor/mmb/proprietary/system/etc/00banner:system/etc/init.d/01mmb
 
