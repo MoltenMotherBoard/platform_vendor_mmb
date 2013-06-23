@@ -23,8 +23,8 @@ PRODUCT_COPY_FILES += \
 
 ## User init support
 PRODUCT_COPY_FILES += \
-    vendor/mmb/proprietary/system/etc/00banner:system/etc/init.d/00banner \
-    vendor/mmb/proprietary/system/etc/90userinit:system/etc/init.d/90userinit
+    vendor/mmb/proprietary/system/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/mmb/proprietary/system/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 ## Camera effects blobs
 PRODUCT_COPY_FILES += \
