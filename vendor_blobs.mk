@@ -41,4 +41,5 @@ PRODUCT_COPY_FILES += \
 ## Other Packages
 PRODUCT_PACKAGES := \
     Camera \
-    Superuser
+    Superuser \
+    openvpn
