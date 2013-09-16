@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Squish a CM otapackage for distribution
-# cyanogen
-#
+# From cyanogen for CM7/9/10.*
+# Edited by MMB team for their AOSP builds
 
 . $ANDROID_BUILD_TOP/vendor/mmb/build-colors
 OUT_TARGET_HOST=`uname -a | grep Darwin`
@@ -24,6 +24,11 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
+if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
+    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$USER.zip
+else
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
+fi
 if [ ! -f "$OTAPACKAGE" ]; then
 	echo -e $CL_RED"$OTAPACKAGE doesn't exist!"$CL_RST;
 	exit 1
@@ -46,7 +51,7 @@ mkdir $REPACK/ota
 (
 cd $REPACK/ota
 printf "Unpacking $OTAPACKAGE..."
-unzip $QUIET $ANDROID_BUILD_TOP/$OTAPACKAGE
+unzip $QUIET $OTAPACKAGE
 echo
 )
 
@@ -72,7 +77,7 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 MODVERSION=`date +%Y%m%d`
-OUTFILE=$OUT/mmb-ics-$MODVERSION.zip
+OUTFILE=$OUT/mmb-gb-$MODVERSION.zip
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 
 # Pack it up and sign
