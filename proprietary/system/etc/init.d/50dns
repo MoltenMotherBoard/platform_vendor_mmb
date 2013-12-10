@@ -1,0 +1,7 @@
+#!/system/bin/sh
+# Hardset global DNS values (fix Mobile Data DNS not working)
+L="log -p i -t FixDNS"
+$L " --- Hardsetting Google DNS (workaround for mobile data DNS) ... --- ";
+setprop net.dns1 8.8.8.8
+setprop net.dns2 8.8.4.4
+$L " --- Done! Now you should enjoy your working mobile data ;)  --- ";
