@@ -4,13 +4,10 @@
 #	They're needed to add some missing (important) features,
 #	already used by other Custom Roms (as CyanogenMod, AOKP, etc).
 
-## Superuser
-PRODUCT_COPY_FILES += \
-    vendor/mmb/proprietary/system/app/Superuser.apk:system/app/Superuser.apk
-
 ## APNs
 PRODUCT_COPY_FILES += \
-    vendor/mmb/proprietary/system/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/mmb/proprietary/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/mmb/proprietary/system/etc/apns-conf-cdma.xml:system/etc/apns-conf-cdma.xml
 
 ## Hosts
 PRODUCT_COPY_FILES += \
@@ -26,10 +23,3 @@ PRODUCT_COPY_FILES += \
     vendor/mmb/proprietary/system/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/mmb/proprietary/system/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-## Camera effects blobs
-PRODUCT_COPY_FILES += \
-    vendor/mmb/proprietary/system/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/mmb/proprietary/system/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
-## Other Packages
-PRODUCT_PACKAGES += Camera
