@@ -60,8 +60,8 @@ $SED -i \
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
 
-# Delete unnecessary binaries
-( cd $REPACK/ota/system/app; echo $DELETE_APKS | xargs rm -f; )
+# Delete unnecessary APKs, if using GAPPs... but now we are not
+#( cd $REPACK/ota/system/app; echo $DELETE_APKS | xargs rm -f; )
 
 # No need for recovery
 rm -rf $REPACK/ota/recovery
@@ -71,7 +71,7 @@ rm -rf $REPACK/ota/recovery
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-MODVERSION=`date +%F-%H.%M.%S`
+MODVERSION=`date +%Y%m%d-%H%M`
 OUTFILE=$OUT/mmb-ics-$MODVERSION.zip
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 
