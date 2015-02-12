@@ -73,7 +73,7 @@ rm -rf $REPACK/ota/recovery
 # Determine what to name the new signed package
 MODVERSION=`date +%Y%m%d-%H%M`
 OUTFILE=$OUT/mmb-ics-$MODVERSION.zip
-echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+echo -e "MODVERSION: $MODVERSION"
 
 # Pack it up and sign
 printf "Zipping package..."
@@ -96,7 +96,7 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo -e $CL_GRN"Package complete: $OUTFILE"$CL_RST
+echo -e "Package complete: $OUTFILE"
 cat $img.md5sum
 echo
 )
